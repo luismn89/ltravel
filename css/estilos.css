@@ -59,6 +59,36 @@ header
 	margin: 0;
 	padding: 0;
 }
+header nav
+{
+	background: #E9E9E9;
+}
+header nav ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+header nav ul li
+{
+	background: linear-gradient(#FFFFFF 0%, #E1E1E1 50%, #B7B7B7 52%, #DDDDDD 100%);
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	width: 49.4%;
+}
+header nav ul li a
+{
+	color: black;
+	display: block;
+	margin: 0;
+	padding: 0.5em 0;
+}
+header nav ul li a:hover
+{
+	background: linear-gradient(#0C8BF3 0%, #0C53BE 50%, #095797 52%, #0E62A0 100%);
+	color: white;
+}
 header #logo_header
 {
 	margin: 0;
@@ -68,31 +98,6 @@ header #logo_header img
 {
 	margin: 1em;
 	width: 150px;
-}
-nav
-{
-	background: #E9E9E9;
-}
-nav ul
-{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-nav ul li
-{
-	background: linear-gradient(#FFFFFF 0%, #E1E1E1 50%, #B7B7B7 52%, #DDDDDD 100%);
-	display: inline-block;
-	text-align: center;
-	vertical-align: middle;
-	width: 49.4%;
-}
-nav ul li a
-{
-	color: black;
-	display: block;
-	margin: 0;
-	padding: 0.5em 0;
 }
 footer
 {
@@ -112,10 +117,18 @@ footer #redes_sociales li
 	display: inline-block;
 	margin: 0.3em;
 }
+footer #redes_sociales li:hover
+{
+	transform: scale(1.3);
+}
 footer #redes_sociales li a
 {
 	color: #665681;
 	font-size: 1.7em;
+}
+footer #redes_sociales li a:hover
+{
+	color: #800080;
 }
 footer .derechos_autor
 {
@@ -137,10 +150,12 @@ footer .logo_footer img
 	position: absolute;
 	width: 100%;
 }
-
+#atributos {
+	text-align: center;
+}
 #atributos .item_atributo
 {
-	margin: 0.5em 0.5em 5em 0.5em;
+	margin: 0.5em 0.5em 5em 0;
 	width: 100%;
 }
 #atributos .item_atributo .descripcion
@@ -150,14 +165,14 @@ footer .logo_footer img
 	color: gray;
 	margin: -3.5em auto;
 	padding: 0.1em;
-	width: 75%;
+	width: 90%;
 }
 #atributos .item_atributo .descripcion .resena_atributo_item
 {
 	border-top: 1px dashed #808080;
 	font-size: 0.8em;
 	margin: 1em;
-	padding-top:  1em;
+	padding-top: 1em;
 	text-align: justify;
 	width: 93%;
 }
@@ -229,6 +244,11 @@ footer .logo_footer img
 	position: absolute;
 	right: 0;
 }
+#contenido #presentacion .boton_presentacion:hover
+{
+	color: black;
+	background: linear-gradient(#FFFF62 0%, #FFFF00 50%, #E6E600 52%, #FFFF00 100%);
+}
 #paquetes_home
 {
 	border-bottom: 1px solid #000048;
@@ -247,7 +267,11 @@ footer .logo_footer img
 	box-shadow: 5px 6px 10px #808080;
 	margin: 0.6em 0.4em;
 	overflow: hidden;
-	width: 97%;
+	/*width: 98%;*/
+}
+#paquetes_home .item:hover
+{
+	border: 1.5px solid #0000A0;
 }
 #paquetes_home .item .enlace_item .descripcion_item
 {
@@ -256,14 +280,14 @@ footer .logo_footer img
 	font-style: italic;
 	float: left;
 	margin: 0.5em;
-	width: 65%;
+	width: 55.5%;
 }
 #paquetes_home .item .enlace_item .imagen_item
 {
 	float:left;
 	height: 120px;
 	margin: 0;
-	width: 120px;
+	width: 40%;
 }
 #paquetes_home .item .enlace_item .imagen_item img
 {
@@ -276,7 +300,99 @@ footer .logo_footer img
 	color: #000000;
 	float: left;
 	margin: 1.5em 0.5em 0.5em 0.5em;
-	width: 65%;
+	width: 55.5%;
 }
 
 
+@media screen and (min-width: 800px){
+	header nav ul li
+	{
+		width: 32.9%;
+	}
+	#atributos .item_atributo
+	{
+		display: inline-block;
+		width: 48.4%;
+	}
+	#paquetes_home p:first-child
+	{
+		margin-left: 2em;
+	}
+	#paquetes_home .item
+	{
+		display: inline-block;
+		width: 48%;
+	}
+	footer #redes_sociales
+	{
+		margin-right: 3em;
+	}
+	footer .derechos_autor
+	{
+		margin-left: 10em;
+	}
+	footer .logo_footer
+	{
+		margin-left: 2em;
+	}
+}
+@media screen and (min-width: 1200px){
+	header nav
+	{
+        background: linear-gradient(#FFFFFF 0%, #E1E1E1 50%, #B7B7B7 52%, #DDDDDD 100%);
+        border-radius: 20em;
+        margin-left: 10em;
+        margin-top: 2.5em;
+        width: 65%;
+	}
+	header nav ul li
+	{
+		background: none;
+		width: 14%;
+	}
+	header nav ul li:first-child
+	{
+		padding-left: 1.7em;
+		width: 20%;
+	}
+	header nav ul li a
+	{
+		padding: 0.6em 0.2em;
+	}
+	header nav, header #logo_header
+	{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	header #logo_header
+	{
+		margin-left: 2em;
+		text-align: left;
+	}
+	#contenido
+	{
+		box-shadow: 0 0 15px #C0C0C0;
+		margin: 0 auto;
+		width: 85%;
+	}
+	#atributos .item_atributo
+	{
+		width: 30%;
+	}
+	#contenido #presentacion .titulo_presentacion
+	{
+		font-size: 2.8em;
+	}
+	#paquetes_home .item
+	{
+		width: 31.7%;
+	}
+	#paquetes_home .item .enlace_item .descripcion_item
+	{
+		width: 55.5%;
+	}
+	#paquetes_home .item .enlace_item .titulo_item
+	{
+		width: 55%;
+	}
+}
