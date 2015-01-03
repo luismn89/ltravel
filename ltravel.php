@@ -10,19 +10,7 @@
 </head>
 <body>
 	<header>
-		<figure id="logo_header">
-			<img src="img/Logo.png">
-		</figure>
-		<nav>
-			<ul>
-				<li><a href="#">Playas del Caribe</a></li>
-				<li><a href="#">Turismo</a></li>
-				<li><a href="#">Paquetes</a></li>
-				<li><a href="#">Pago</a></li>
-				<li><a href="#">Contacto</a></li>
-				<li><a href="#">Acerca de</a></li>
-			</ul>
-		</nav>
+		<?php include(header.php); ?>
 	</header>
 	<section id="contenido">
 		<section id="presentacion">
@@ -63,6 +51,7 @@
 			</article>
 		</section>
 		<section id="atributos">
+			<p>¡Conoce un poco de venezuela!</p>
 			<article class="item_atributo">
 				<figure class="imagen_atributo_item">
 					<img src="img/img_description_vzla.png">
