@@ -7,12 +7,12 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/estilos.css">
 	<script src="js/prefixfree.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
 </head>
 <body>
-	<header>
-		<?php include(header.php); ?>
-	</header>
-	<section id="contenido">
+	<?php include("header.php"); ?>
+	<section class="contenido">
 		<section id="presentacion">
 			<figure class="imagen_presentacion">
 				<img src="img/img_principal_home.png">
@@ -97,14 +97,7 @@
 		</section>
 	</section>
 	<footer>
-		<figure class="logo_footer">
-			<img src="img/Logo.png">
-		</figure>
-		<p class="derechos_autor"><strong>&copy; 2015 by ltravel</strong><br>Producto creado por @luismn89</p>
-		<ul id="redes_sociales">
-			<li><a href="#" class="icon-twitter"></a></li>
-			<li><a href="#" class="icon-facebook"></a></li>
-		</ul>
+		<?php include("footer.php"); ?>
 	</footer>
 </body>
 </html>
