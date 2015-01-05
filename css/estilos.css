@@ -329,6 +329,20 @@
 	}
 
 /* Inicio por clases */
+	.condiciones_pago p
+	{
+		margin: 1em;
+		text-align: justify;
+	}
+	.condiciones_pago ul li
+	{
+		font-weight: bold;
+		margin: 1em 0;
+	}
+	.condiciones_pago, .metodos_pago
+	{
+		margin: 1em 0.5em 3em 0.5em;
+	}
 	.contenido
 	{
 		width: 100%;
@@ -499,6 +513,17 @@
 		background: #0000FF;
 		border-radius: 0.5em;
 	}
+	.metodos_pago a
+	{
+		display: block;
+		margin: 0.8em auto;
+		width: 50%;
+	}
+	.metodos_pago a img
+	{
+		height: 60px;
+		width: 100%;
+	}
 	.paquete
 	{
 		background: white;
@@ -646,6 +671,16 @@
 		{
 			width: 32.9%;
 		}
+		.metodos_pago a
+		{
+			display: inline-block;
+			margin: 1em;
+			text-align:center;
+			width: 45%;
+		}
+		.metodos_pago a img{
+			width: 65%;
+		}
 		.paquete
 		{
 			display: inline-block;
@@ -726,6 +761,10 @@
 		{
 			width: 55%;
 		}
+		.condiciones_pago, .metodos_pago
+		{
+
+		}
 		.contenido
 		{
 			box-shadow: 0 0 15px #C0C0C0;
@@ -735,6 +774,14 @@
 		.contenido #presentacion .titulo_presentacion
 		{
 			font-size: 2.8em;
+		}
+		.contenido_contacto
+		{
+			padding-bottom: 6em;
+		}
+		.contenido_pago
+		{
+			padding: 2em 0 11em 0;
 		}
 		.lista_ciudades
 		{
