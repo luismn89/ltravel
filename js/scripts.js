@@ -1,6 +1,15 @@
 $(document).ready(function() {
-	$('#link_paquete').on('click', function(event){
-		event.preventDefault();
-		$('#lista_ciudades').toggle();
-	});
+	if ($(window).width() < 1200) {
+		$('#link_paquete').on('click', function(){
+			$('#lista_ciudades').toggle();
+		});
+	} else {
+		$('#lista_ciudades').hide();
+		$('#link_paquete').on('mouseover', function(){
+			$('#lista_ciudades_desktop').fadeIn('fast');
+		});
+		$('#lista_ciudades_desktop').on('mouseleave', function(){
+			$('#lista_ciudades_desktop').fadeOut('fast');
+		});
+	}
 });

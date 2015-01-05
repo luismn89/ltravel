@@ -152,6 +152,13 @@
 		position: absolute;
 		width: 100%;
 	}
+	label
+	{
+		display: block;
+		font-style: italic;
+		font-weight: bold;
+		margin: 0.5em 1em;
+	}
 
 /* Inicio por ids*/
 	#atributos {
@@ -218,6 +225,17 @@
 	{
 		width: 100%;
 	}
+	#cronograma
+	{
+		margin: 1em auto;
+		width: 70%;
+	}
+	#cronograma img
+	{
+		border-radius: 1em;
+		box-shadow: 5px 5px 10px #808080;
+		width: 100%;
+	}
 	#formulario
 	{
 		background: #8080FF;
@@ -252,6 +270,10 @@
 		margin: 0.2em 0;
 		padding: 0.3em;
 		width: 95%;
+	}
+	#lista_ciudades_desktop
+	{
+		display: none;
 	}
 	#paquetes_home
 	{
@@ -385,6 +407,67 @@
 	{
 		text-decoration: none;
 	}
+	.costo_paquete
+	{
+		margin: 1em 2.5em;
+		width: 41%;
+	}
+	.costo_paquete span
+	{
+		font-weight: bold;
+	}
+	.costo_paquete, .link_pago
+	{
+		display: inline-block;
+		vertical-align: top;
+	}
+	.descripcion_paquete_detalle
+	{
+		margin: 1em;
+		padding: 0;
+		text-align: justify;
+	}
+	.fechas_paquete
+	{
+		margin: 1em 1.5em;
+	}
+	.fechas_paquete li
+	{
+		margin: 0.5em 0;
+	}
+	.galeria
+	{
+		margin: 1em 0.4em;
+	}
+	.galeria figure
+	{
+		border: 1.5px solid #000080;
+		display: inline-block;
+		height: 80px;
+		margin: 0 0.1em;
+		width: 31%;
+	}
+	.galeria figure img
+	{
+		height: 100%;
+		width: 100%;
+	}
+	.link_pago
+	{
+		background: linear-gradient(#37FF37 0%, #00D200 50%, #00D900 52%, #06FF06 100%);
+		border-radius: 0.5em;
+		color: white;
+		float: right;
+		margin: 0 2em 0 0;
+		padding: 0.5em 1em;
+		text-decoration: none;
+		text-align: center;
+	}
+	.link_pago:hover
+	{
+		background: linear-gradient(#FFFF40 0%, #FFFF00 50%, #DFDF00 52%, #FFFF00 100%);
+		color: black;
+	}
 	.lista_ciudades
 	{
 		display: none;
@@ -415,6 +498,76 @@
 	{
 		background: #0000FF;
 		border-radius: 0.5em;
+	}
+	.paquete
+	{
+		background: white;
+		border-radius: 1em;
+		margin: 1em auto;
+		overflow: hidden;
+		width: 90%;
+	}
+	.paquete .imagen_paquete
+	{
+		height: 160px;
+		margin: 0;
+		width: 100%;
+	}
+	.paquete .imagen_paquete img
+	{
+		height: 100%;
+		width: 100%;
+	}
+	.paquete .texto_paquete
+	{
+		margin: 0;
+		padding-left: 0.5em;
+		width: 65%;
+	}
+	.paquete .texto_paquete .titulo_paquete
+	{
+		margin: 0.4em 0;
+	}
+	.paquete .texto_paquete	.descripcion_paquete
+	{
+		color: #808080;
+		font-size: 0.8em;
+		margin: 0.5em 0;
+	}
+	.paquete .botones_paquete
+	{
+		width: 30%;
+	}
+	.paquete .botones_paquete .btn_detalle
+	{
+		color: #808080;
+		display: block;
+		float: right;
+		font-size: 1.5em;
+		margin: 0.1em 0.3em;
+		text-align: center;
+		width: 100%;
+	}
+	.paquete .botones_paquete .btn_detalle:hover
+	{
+		color: black;
+		transform: scale(1.2);
+	}
+	.paquete .botones_paquete .btn_face
+	{
+		background: blue;
+		color: white;
+		display: block;
+		margin: 0.5em auto;
+	}
+	.paquete .texto_paquete, .paquete .botones_paquete
+	{
+		display: inline-block;
+	 	vertical-align: top;
+	}
+	.titulo_paquete_detalle
+	{
+		text-align: center;
 	}
 
 /* Media Queries para el responsive*/
@@ -467,11 +620,48 @@
 			border-radius: 0.5em;
 			width: 100%;
 		}
+		.galeria
+		{
+			margin: 1em 1em;
+			width: 100%;
+		}
+		.galeria figure
+		{
+			border: 1.5px solid #000080;
+			display: inline-block;
+			height: 150px;
+			margin: 0 0.2em;
+			width: 31%;
+		}
+		.link_pago
+		{
+			float: left;
+			margin-left: 2.5em;
+		}
+		.link_pago, .costo_paquete
+		{
+			display: block;
+		}
 		.lista_ciudades li
 		{
 			width: 32.9%;
 		}
-
+		.paquete
+		{
+			display: inline-block;
+			margin: 1em;
+			width: 45.6%;
+		}
+		.seccion_cronograma, .seccion_fechas
+		{
+			display: inline-block;
+			vertical-align: top;
+			width: 49%;
+		}
+		.seccion_fechas
+		{
+			margin-top: 5em;
+		}
 	}
 	@media screen and (min-width: 1200px){
 		header nav
@@ -481,6 +671,10 @@
 	        margin-left: 10em;
 	        margin-top: 2.5em;
 	        width: 65%;
+		}
+		header nav ul
+		{
+			position: relative;
 		}
 		header nav ul li
 		{
@@ -510,6 +704,16 @@
 		{
 			width: 30%;
 		}
+		#lista_ciudades_desktop
+		{
+			position: absolute;
+			z-index: 2;
+		}
+		#lista_ciudades_desktop li:first-child
+		{
+			padding-left: 0;
+			width: 99%;
+		}
 		#paquetes_home .item
 		{
 			width: 31.7%;
@@ -534,11 +738,16 @@
 		}
 		.lista_ciudades
 		{
-			width: 12%;
+			background: #C0C0C0;
+			width: 14%;
 		}
 		.lista_ciudades li
 		{
 			display: block;
 			width: 99%;
+		}
+		.lista_ciudades li a
+		{
+			color: black;
 		}
 	}

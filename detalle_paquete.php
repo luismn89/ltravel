@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/estilos.css">
 	<script src="js/prefixfree.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
 </head>
 <body>
 	<!-- <?php include("header.php"); ?> -->
@@ -38,30 +40,37 @@
 		<li><a href="paquetes.php">Isla de Margarita</a></li>
 		<li><a href="paquetes.php">Los Roques</a></li>
 	</ul>
-	<section class="contenido contenido_contacto">
-		<section id="seccion_formulario">
-			<p>
-				Si usted presenta alguna duda con respecto a nuestros paquetes o cronogramas por favor
-				comuniquenoslo, para asi mejorar nuestros servicios!
-			</p>
-			<form id="formulario" action="" method="post">
-				<input type="text" name="nombre" placeholder="Nombre" required>
-				<input type="email" name="email" placeholder="Email" required>
-				<input type="text" name="asunto" placeholder="Asunto" required>
-				<textarea name="motivo" id="input_motivo" cols="30" rows="6" placeholder="Motivo" required></textarea>
-				<input type="submit" value="Enviar">
-			</form>
-		</section>
-		<section id="complemento_contacto">
-			<figure>
-				<img src="img/img_contacto.jpg">
+	<section class="contenido">
+		<div class="seccion_cronograma">
+			<h2 class="titulo_paquete_detalle">
+				Tour por la isla.
+			</h2>
+			<label>Cronograma de Viaje:</label>
+			<figure id="cronograma">
+				<img src="img/img_description_vzla.png">
 			</figure>
-			<p>También puede contactarse con nosotros a traves de nuestras redes sociales.</p>
-			<ul>
-				<li><a href="#" class="icon-twitter"> @ltravel</a></li>
-				<li><a href="#" class="icon-facebook"> ltravel</a></li>
+			<p class="descripcion_paquete_detalle">
+				Recorrido por mar y tierra de la isla de margarita por todos sus zonas turisticas.
+			</p>
+		</div>
+		<div class="seccion_fechas">
+			<label>Fechas disponibles para el viaje:</label>
+			<ul class="fechas_paquete">
+				<li>Del 12 al 18 de Enero.</li>
+				<li>Del 23 al 29 de Enero</li>
+				<li>Del 04 al 19 de Febrero</li>
 			</ul>
-		</section>
+			<label>Costo del paquete:</label>
+			<p class="costo_paquete">
+				50.000 BsF. / 1.000 $.
+			</p>
+			<a href="pagos.php" class="link_pago">Comprar</a>
+		</div>
+		<div class="galeria">
+			<figure><img src="img/gal_1.jpg"></figure>
+			<figure><img src="img/gal_2.jpg"></figure>
+			<figure><img src="img/gal_3.jpg"></figure>
+		</div>
 	</section>
 	<!-- <?php include("footer.php"); ?> -->
 	<footer>

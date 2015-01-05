@@ -6,12 +6,12 @@
 		<ul>
 			<li><a href="index.php">Playas del Caribe</a></li>
 			<li><a href="turismo.php">Turismo</a></li>
-			<li><a id="link_paquete" href="paquete.php">Paquetes</a>
-				<ul id="lista_ciudades" class="lista_ciudades">
-					<li><a href="#">Isla de Margarita</a></li>
-					<li><a href="#">Los Roques</a></li>
-					<li><a href="#">Isla de Margarita</a></li>
-					<li><a href="#">Los Roques</a></li>
+			<li><a id="link_paquete" href="#">Paquetes</a>
+				<ul id="lista_ciudades_desktop" class="lista_ciudades">
+					<li><a href="paquetes.php">Isla de Margarita</a></li>
+					<li><a href="paquetes.php">Los Roques</a></li>
+					<li><a href="paquetes.php">Isla de Margarita</a></li>
+					<li><a href="paquetes.php">Los Roques</a></li>
 				</ul>
 			</li>
 			<li><a href="pagos.php">Pago</a></li>
@@ -21,8 +21,8 @@
 	</nav>
 </header>
 <ul id="lista_ciudades" class="lista_ciudades">
-	<li><a href="#">Isla de Margarita</a></li>
-	<li><a href="#">Los Roques</a></li>
-	<li><a href="#">Isla de Margarita</a></li>
-	<li><a href="#">Los Roques</a></li>
+	<li><a href="paquetes.php">Isla de Margarita</a></li>
+	<li><a href="paquetes.php">Los Roques</a></li>
+	<li><a href="paquetes.php">Isla de Margarita</a></li>
+	<li><a href="paquetes.php">Los Roques</a></li>
 </ul>
