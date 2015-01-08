@@ -1,3 +1,7 @@
+<?php
+	require_once ('includes/funciones.php');
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,129 +15,64 @@
 	<script src="js/scripts.js"></script>
 </head>
 <body>
-	<!-- <?php include("header.php"); ?> -->
-	<header>
-		<figure id="logo_header">
-			<img src="img/Logo.png">
-		</figure>
-		<nav>
-			<ul>
-				<li><a href="index.php">Playas del Caribe</a></li>
-				<li><a href="turismo.php">Turismo</a></li>
-				<li><a id="link_paquete" href="#">Paquetes</a>
-					<ul id="lista_ciudades_desktop" class="lista_ciudades">
-						<li><a href="paquetes.php">Isla de Margarita</a></li>
-						<li><a href="paquetes.php">Los Roques</a></li>
-						<li><a href="paquetes.php">Isla de Margarita</a></li>
-						<li><a href="paquetes.php">Los Roques</a></li>
-					</ul>
-				</li>
-				<li><a href="pagos.php">Pago</a></li>
-				<li><a href="contacto.php">Contacto</a></li>
-				<li><a href="acercade.php">Acerca de</a></li>
-			</ul>
-		</nav>
-	</header>
-	<ul id="lista_ciudades" class="lista_ciudades">
-		<li><a href="paquetes.php">Isla de Margarita</a></li>
-		<li><a href="paquetes.php">Los Roques</a></li>
-		<li><a href="paquetes.php">Isla de Margarita</a></li>
-		<li><a href="paquetes.php">Los Roques</a></li>
-	</ul>
+	<?php include("includes/header.php"); ?>
 	<section class="contenido">
 		<section id="presentacion">
 			<figure class="imagen_presentacion">
 				<img src="img/img_principal_home.png">
 			</figure>
-			<h1 class="titulo_presentacion">Disfruta de 7 dias todo incluido en la isla de margarita</h1>
-			<a href="#" class="boton_presentacion">Ver Paquetes</a>
+			<h1 class="titulo_presentacion"><?php echo $titulo_presentacion; ?></h1>
 		</section>
+		<section class="cronograma">
+			<a href="img/cronograma1.png">
+				<figure class="img_cronograma">
+					<img src="img/cronograma1.png">
+				</figure>
+			</a>
+		</section>
+		<label> <?php echo $sub_cronograma; ?>.</label>
 		<section id="paquetes_home">
-			<p>Echa un vistazo a nuestros ultimos paquetes de viaje</p>
+
+			<?php
+				$articulos = unserialize($titulos);
+				$actividades = unserialize($cronograma_dia);
+				$imagenes = unserialize($imagenes_dia);
+
+				foreach ($articulos as $dias_art => $descripcion) {
+					$cadena =	'<article class="item item_noSeleccionado">'.
+									'<a href="#" class="enlace_item">'.
+										'<figure class="imagen_item">'.
+											'<img src="'.$imagenes[$dias_art].'">'.
+										'</figure>'.
+										'<div class="texto_item">'.
+											'<h4 class="titulo_item">'.$dias_art.'.</h4>'.
+											'<p class="descripcion_item">'.$descripcion.'.</p>'.
+										'</div>'.
+										'<div class="actividades">'.
+											'<label>'.$actividades_tit.':</label>'.
+											'<ul>';
+					foreach ($actividades[$dias_art] as $act) {
+						$cadena .= '<li>'.$act.'</li>';
+					}
+					$cadena .=				'</ul>'.
+										'</div>'.
+									'</a>'.
+								'</article>';
+					echo $cadena;
+				}
+			?>
 			<article class="item">
-				<a href="#" class="enlace_item">
-					<figure class="imagen_item">
-						<img src="img/img_articulos_home.png">
-					</figure>
-					<h4 class="titulo_item">Aventura en 4 ruedas - Descubre la isla</h4>
-					<p class="descripcion_item">Isla de Margarita, Venezuela</p>
-				</a>
-			</article>
-			<article class="item">
-				<a href="#" class="enlace_item">
-					<figure class="imagen_item">
-						<img src="img/img_articulos_home.png">
-					</figure>
-					<h4 class="titulo_item">Aventura en 4 ruedas - Descubre la isla</h4>
-					<p class="descripcion_item">Isla de Margarita, Venezuela</p>
-				</a>
-			</article>
-			<article class="item">
-				<a href="#" class="enlace_item">
-					<figure class="imagen_item">
-						<img src="img/img_articulos_home.png">
-					</figure>
-					<h4 class="titulo_item">Aventura en 4 ruedas - Descubre la isla</h4>
-					<p class="descripcion_item">Isla de Margarita, Venezuela</p>
-				</a>
+				<section class="botones_adicionales botones_pc">
+					<a href="includes/contacto.php">Reservar</a>
+					<iframe id="btn_like" src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FPraiasDoCaribe&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+				</section>
 			</article>
 		</section>
-		<section id="atributos">
-			<p>¡Conoce un poco de venezuela!</p>
-			<article class="item_atributo">
-				<figure class="imagen_atributo_item">
-					<img src="img/img_description_vzla.png">
-				</figure>
-				<div class="descripcion">
-					<h2 class="titulo_atributo_item">Los Bravos de Margarita</h2>
-					<p class="subtitulo_atributo_item">Since 1991</p>
-					<p class="resena_atributo_item">
-						BRAVOS DE MARGARITA
-						Una historia que nace en tierra firme y se consolida en la más hermosa isla del Caribe.
-						Es el actual equipo de Beisbol autoctono del Estado Nueva Esparta que hace vida en la Liga Venezolana de Beisbol Profesional.
-					</p>
-				</div>
-			</article>
-			<article class="item_atributo">
-				<figure class="imagen_atributo_item">
-					<img src="img/img_description_vzla.png">
-				</figure>
-				<div class="descripcion">
-					<h2 class="titulo_atributo_item">Los Bravos de Margarita</h2>
-					<p class="subtitulo_atributo_item">Since 1991</p>
-					<p class="resena_atributo_item">
-						BRAVOS DE MARGARITA
-						Una historia que nace en tierra firme y se consolida en la más hermosa isla del Caribe.
-						Es el actual equipo de Beisbol autoctono del Estado Nueva Esparta que hace vida en la Liga Venezolana de Beisbol Profesional.
-					</p>
-				</div>
-			</article>
-			<article class="item_atributo">
-				<figure class="imagen_atributo_item">
-					<img src="img/img_description_vzla.png">
-				</figure>
-				<div class="descripcion">
-					<h2 class="titulo_atributo_item">Los Bravos de Margarita</h2>
-					<p class="subtitulo_atributo_item">Since 1991</p>
-					<p class="resena_atributo_item">
-						BRAVOS DE MARGARITA
-						Una historia que nace en tierra firme y se consolida en la más hermosa isla del Caribe.
-						Es el actual equipo de Beisbol autoctono del Estado Nueva Esparta que hace vida en la Liga Venezolana de Beisbol Profesional.
-					</p>
-				</div>
-			</article>
+		<section class="botones_adicionales botones_cel">
+			<a href="includes/contacto.php">Reservar</a>
+			<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FPraiasDoCaribe&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
 		</section>
 	</section>
-	<!-- <?php include("footer.php"); ?> -->
-	<footer>
-		<figure class="logo_footer">
-			<img src="img/Logo.png">
-		</figure>
-		<p class="derechos_autor"><strong>&copy; 2015 by ltravel</strong><br>Producto creado por @luismn89</p>
-		<ul id="redes_sociales">
-			<li><a href="#" class="icon-twitter"></a></li>
-			<li><a href="#" class="icon-facebook"></a></li>
-		</ul>
-	</footer>
+	<?php include("includes/footer.php"); ?>
 </body>
 </html>
